@@ -1,28 +1,82 @@
+/*
+ * Copyright 2025 Retex
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    background-color: #010E0E;
+    color: #FFFFFF;
+}
+
 #up {
     display: flex;
-    align-items: center; /* Dikey ortalama için */
+    width: calc(100% - 20px);
     background-color: #000000;
-    position: relative fixed;
-    width: 99%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     border-radius: 20px;
-    padding: 10px; /* İç boşluk ekleyerek daha iyi görünmesini sağlayın */
+    padding: 10px;
 }
 
 #up img {
     border-radius: 20px;
-    margin-right: auto; /* Logoyu sola yaslar */
+    margin-right: auto;
 }
 
 #up button {
     background-color: #010E0E;
     color: azure;
-    margin-left: 10px; /* Butonlar arası boşluk */
-    border: none; /* Buton kenarlığını kaldır */
-    padding: 8px 16px; /* Buton iç boşluk */
-    border-radius: 5px; /* Buton köşelerini yuvarlat */
-    cursor: pointer; /* Fare üzerine gelince işaretçi değişsin */
+    min-height: fit-content;
+    height: 100%;
+    align-self: stretch;
+    margin-left: 10px;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #up button:hover {
-    background-color: #031a1a; /* Fare üzerine gelince arka plan rengi değişsin */
+    background-color: #031a1a;
+}
+
+#menu-icon {
+    display: none; /* Masaüstünde gizle */
+}
+
+@media (max-width: 600px) {
+    #up a,
+    #up button:not(#menu-icon) {
+        display: none;
+    }
+    #up.show-menu a,
+    #up.show-menu button:not(#menu-icon) {
+        display: inline-block;
+    }
+    #menu-icon {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        background: #010E0E;
+        border-radius: 8px;
+        margin-left: 10px;
+        cursor: pointer;
+        border: none;
+        color: azure;
+        font-size: 1.5em;
+    }
 }

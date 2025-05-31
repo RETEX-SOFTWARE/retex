@@ -1,0 +1,28 @@
+#up {
+    display: flex;
+    align-items: center; /* Dikey ortalama için */
+    background-color: #000000;
+    position: relative fixed;
+    width: 99%;
+    border-radius: 20px;
+    padding: 10px; /* İç boşluk ekleyerek daha iyi görünmesini sağlayın */
+}
+
+#up img {
+    border-radius: 20px;
+    margin-right: auto; /* Logoyu sola yaslar */
+}
+
+#up button {
+    background-color: #010E0E;
+    color: azure;
+    margin-left: 10px; /* Butonlar arası boşluk */
+    border: none; /* Buton kenarlığını kaldır */
+    padding: 8px 16px; /* Buton iç boşluk */
+    border-radius: 5px; /* Buton köşelerini yuvarlat */
+    cursor: pointer; /* Fare üzerine gelince işaretçi değişsin */
+}
+
+#up button:hover {
+    background-color: #031a1a; /* Fare üzerine gelince arka plan rengi değişsin */
+}
